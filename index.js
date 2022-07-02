@@ -2,6 +2,7 @@ const express = require("express");
 const conexion = require("./database");
 const enrutador = require("./controladores");
 const app = express();
+const PUERTO = process.env.PORT;
 
 conexion();
 
@@ -16,7 +17,6 @@ app.use((req, res, next) => {
 
 enrutador(app);
 
-const server = app.listen(process.env.PORT || 5000, () => {
-    const port = server.address().port;
-    console.log(`Express is working on port ${port}`);
+app.listen(PUERTO, () => {
+    console.log(`Servidor a disposición en el puerto ${PUERTO}`);
 });
