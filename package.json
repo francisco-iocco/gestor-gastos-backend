@@ -1,0 +1,23 @@
+{
+  "name": "gestor-gastos-servidor",
+  "version": "1.0.0",
+  "description": "Servidor hecho en 'Node.js' con su respectivo framework 'Express.js'. Este servidor fue diseñado para conectarse a un Cluster de 'MongoDB'.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [
+    "Node",
+    "Express",
+    "MongoDB",
+    "GestorDeGastos",
+    "FranciscoIocco"
+  ],
+  "author": "franciscoiocco6@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.4.1"
+  }
+}
