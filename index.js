@@ -5,8 +5,6 @@ const app = express();
 
 conexion();
 
-app.set("port", process.env.PORT || 5000)
-
 app.use(express.urlencoded());
 app.use(express.json());
 app.use((req, res, next) => {
@@ -18,6 +16,7 @@ app.use((req, res, next) => {
 
 enrutador(app);
 
-app.listen(app.get("port"), () => {
-    console.log(`Servidor a disposición en el ${app.get("port")}`);
+const server = app.listen(process.env.PORT || 5000, () => {
+    const port = server.address().port;
+    console.log(`Express is working on port ${port}`);
 });
